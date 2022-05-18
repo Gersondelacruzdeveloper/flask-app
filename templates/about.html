@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Flask</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{{url_for('index')}}">Home</a></li>
-            <li><a href="{{url_for('about')}}">About</a></li>
-            <li><a href="{{url_for('contact')}}">contact</a></li>
-        </ul>
-    </nav>
+{% extends 'base.html' %}
 
-    <h1>about Page</h1>
-</body>
-</html>
+{% block content %}
+<h1>{{page_title}}</h1>
+
+<!-- {% for number in list_of_numbers%}
+<p>{{number}}</p>
+{% endfor %} -->
+
+
+{% for info in company %}
+
+    {% if loop.index % 2 != 0 %}
+    
+    <h5><a href="/about/{{info.url}}">{{info.name}}</a></h5>
+    <img src="{{info.image_source}}" alt=" the best ">
+    <p>{{info.description}}</p> 
+
+    {% endif %}
+
+{% endfor %}
+
+
+{% endblock %}
+
+  <!-- {{loop.index}}
+        <p>my id {{info.id}}</p> -->

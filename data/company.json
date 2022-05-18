@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Gerson de la cruz",
+        "description": "Extensive experience in the division of hotel management including: financial management, food and beverage, sales and marketing technology, and guest services. Effective supervision and motivations of all employees to maintain optimal operations and implement programs that helps the development of different departments.",
+        "image_source": "https://media-exp1.licdn.com/dms/image/C4D03AQHiv62fHkh8KA/profile-displayphoto-shrink_200_200/0/1517466765522?e=1658361600&v=beta&t=Gxeyp_SEgN6kAmnIHdTzL5wSWjtu7H8HzPL6Dpm7Hc0",
+        "url": "Gerson"
+
+    },
+    {
+        "id": 2,
+        "name": "baby hooded towel",
+        "description": "Organic Bamboo Hooded Baby Towel by Liname - Ultra Soft, Thick & Extra Absorbent Baby towels with hood for newborns - Keeps Your Baby Warm & Cosy - Extra Large Baby Bath Towel for Infants & Toddlers",
+        "image_source": "https://m.media-amazon.com/images/I/61PK4ziKJIL._AC_SX679_.jpg",
+        "url": "baby-hooded-towel"
+    }
+]

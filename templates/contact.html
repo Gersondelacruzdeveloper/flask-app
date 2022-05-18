@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Flask</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="{{url_for('index')}}">Home</a></li>
-            <li><a href="{{url_for('about')}}">About</a></li>
-            <li><a href="{{url_for('contact')}}">contact</a></li>
-        </ul>
-    </nav>
-    <h1>contact Page</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{page_title}}</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                    {% for message in  messages %}
+                     <li>{{message}}</li> 
+                    {% endfor %}
+            </ul>
+        {% endif%}
+    {% endwith%}
+   <form id="contact-form" action="" method="POST">
+    <input  class="input-field" type="text" name="name" placeholder="Name">
+    <input class="input-field" type="text" name="subject" placeholder="Subject">
+    <input  class="input-field" type="email" name="email" placeholder="Email">
+    <textarea class="input-field" name="message" placeholder="Type your message here..."></textarea>
+    <input class="form_btn" id="submit-btn" type="submit" value="Submit">
+  </form>
+
+{% endblock %}
